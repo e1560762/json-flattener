@@ -2,11 +2,11 @@
 Returns path to every terminal value in a JSON structure.
 
 ## Installing / Getting started
-Compatible with Python 3.5
+Compatible with Python 3.6.5
 
 For installing instructions, please look at https://www.python.org/downloads/
 
-After installing Python 3.5. You can either clone the code,
+After installing Python 3.6.5. You can either clone the code,
 
 ```shell
 mkdir <FOLDER>
