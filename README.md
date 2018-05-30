@@ -25,7 +25,7 @@ python run.py --input <path to input file> [--output <path to output file>] [--i
 ## Features
 * Converts nested json objects to single level json objects and writes to a file.
 * Merges keys in a branch using ".". For example {"1":{"2":{"3":none}}} is transformed to {"1.2.3": none}
-* Does not parse array objects.
+* Does not work for array objects.
 
 ### Parameters
 * --input: (Required) Path to file that includes the JSON structure.
