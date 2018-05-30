@@ -1,0 +1,32 @@
+{
+    "_id": "5b0eeaeaef6774fbf9f68ff0",
+    "index": 1,
+    "guid": "5aaedf1c-324e-4ded-bab1-539f022d72e2",
+    "isActive": true,
+    "balance": "$3,598.49",
+    "picture": "http://placehold.it/32x32",
+    "age": 31,
+    "eyeColor": "green",
+    "name": "Jenkins Zamora",
+    "gender": "male",
+    "company": "CORMORAN",
+    "email": "jenkinszamora@cormoran.com",
+    "phone": "+1 (966) 550-2187",
+    "address": "867 Alabama Avenue, Chalfant, Puerto Rico, 3593",
+    "about": "Cillum cillum mollit elit nostrud commodo proident commodo eu voluptate nostrud proident magna. Labore id cupidatat labore esse occaecat officia nisi culpa ullamco laborum reprehenderit ea laborum irure. Ipsum dolor et do aliqua laborum et non nisi ex. Anim cupidatat proident sit anim consectetur aliqua nostrud culpa mollit cillum ullamco aute officia irure. Id voluptate id sunt dolore voluptate laboris culpa cillum adipisicing. Sit pariatur est cillum in nostrud sint ullamco amet esse non mollit consectetur est.\r\n",
+    "registered": "2014-07-23T06:07:35 +07:00",
+    "latitude": 89.129339,
+    "longitude": 58.913938,
+    "tags": {
+        "id_1": "sint",
+        "id_2": "anim",
+        "id_3": "laboris",
+        "id_4": "non",
+        "id_5": "amet",
+        "id_6": "laborum",
+        "id_7": "cupidatat"
+    },
+    "friends": { "id": {"id": {"obj1": 1, "obj2": 2}}, "name": "Ayala Matthews" },
+    "greeting": "Hello, Jenkins Zamora! You have 7 unread messages.",
+    "favoriteFruit": "strawberry"
+}
