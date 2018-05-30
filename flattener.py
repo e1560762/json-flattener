@@ -6,6 +6,12 @@ class JsonFlattener:
 	DEFAULT_OUTPUT = "out_flattened_json.json"
 
 	def parse(json_obj):
+		"""Uses breadth first traversal to process nested json objects.
+		Inner elements are stored in a queue.
+		params:
+		: json_obj -> dictionary that is read from the input file.
+		returns single level dictionary
+		"""
 		try:
 			queue = []
 			result = {}
@@ -27,6 +33,11 @@ class JsonFlattener:
 			return result
 
 	def read(fp):
+		""" Converts content of file to a dictionary
+		params:
+		: fp -> Pointer to file object
+		returns dictionary
+		"""
 		try:
 			stream = load(fp)
 		except Exception as e:
@@ -36,6 +47,14 @@ class JsonFlattener:
 			return stream
 
 	def flatten(input_path, output_path, indent=4):
+		""" Reads the json object from the input file, converts to a single level dictionary,
+		and writes the new dictionary to the output file.
+		params:
+		: input_path -> Path to the input file that contains original json.
+		: output_path -> Path to output file that contains flattened json
+		: indent -> Prepends number of spaces when printing
+		returns boolean
+		"""
 		try:
 			result = {}
 			with open(input_path, "r") as fin:
@@ -58,6 +77,8 @@ class JsonFlattener:
 				fout.write("}")
 		except Exception as e:
 			logging.error("In JsonFlattener.flatten: {0}".format(str(e)))
+			return False
+		return True
 
 	def _to_dict(flat_dict):
 		original = {}
