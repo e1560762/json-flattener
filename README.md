@@ -18,7 +18,7 @@ or download as a zip file and extract the content to a specific folder.
 After downloading the source code, you can run the code from command line,
 
 ```shell
-cd <FOLDER>/jsonflattener
+cd <FOLDER>/json-flattener
 python run.py --input <path to input file> [--output <path to output file>] [--indent <number of spaces>]
 ```
 
