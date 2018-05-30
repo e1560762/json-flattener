@@ -73,7 +73,7 @@ class JsonFlattener:
 							value = "false"
 					elif value is None:
 						value = "null"
-					fout.write("{0}\"{1}\": {2}\n".format(indent*" ",key, value))
+					fout.write("{0}\"{1}\": {2},\n".format(indent*" ",key, value))
 				fout.write("}")
 		except Exception as e:
 			logging.error("In JsonFlattener.flatten: {0}".format(str(e)))
