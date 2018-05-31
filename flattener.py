@@ -56,12 +56,14 @@ class JsonFlattener:
 		returns boolean
 		"""
 		try:
+			number_of_bytes = 0
 			result = {}
 			with open(input_path, "r") as fin:
 				result = JsonFlattener.parse(JsonFlattener.read(fin))
 
-			with open(output_path, "w") as fout:
+			with open(output_path, "w+") as fout:
 				fout.write("{\n")
+				number_of_bytes += 2
 				for key, value in result.items():
 					if isinstance(value, str):
 						value = "\\\"".join(value.split("\""))
@@ -74,7 +76,10 @@ class JsonFlattener:
 					elif value is None:
 						value = "null"
 					fout.write("{0}\"{1}\": {2},\n".format(indent*" ",key, value))
-				fout.write("}")
+					number_of_bytes += indent + len(key) + len(str(value)) + 6
+				fout.seek(number_of_bytes-2)
+				fout.truncate(number_of_bytes-2)
+				fout.write("\n}")
 		except Exception as e:
 			logging.error("In JsonFlattener.flatten: {0}".format(str(e)))
 			return False
